@@ -1,0 +1,36 @@
+{
+  "name": "yet-another-redux-helpers",
+  "version": "0.0.2",
+  "description": "Typescript helper definitions and functions for redux library",
+  "scripts": {
+    "build": "rm -rf lib && npm run build:webpack && npm run build:tsc",
+    "build:tsc": "tsc --emitDeclarationOnly true --declaration true",
+    "build:webpack": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vagonpidarasov/redux-helpers.git"
+  },
+  "keywords": [
+    "redux",
+    "typescript",
+    "test"
+  ],
+  "files": [
+    "lib/*"
+  ],
+  "main": "lib/index.js",
+  "author": "Stanislav Beresnev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vagonpidarasov/redux-helpers/issues"
+  },
+  "homepage": "https://github.com/vagonpidarasov/redux-helpers#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "awesome-typescript-loader": "^5.2.1",
+    "typescript": "^3.5.3",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  }
+}
