@@ -1,6 +1,6 @@
 {
   "name": "yet-another-redux-helpers",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "Typescript helper definitions and functions for redux library",
   "scripts": {
     "build": "rm -rf lib && npm run build:webpack && npm run build:tsc",
@@ -17,6 +17,7 @@
     "test"
   ],
   "files": [
+    "index.d.ts",
     "lib/*"
   ],
   "main": "lib/index.js",
