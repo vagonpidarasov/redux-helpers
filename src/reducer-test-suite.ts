@@ -7,11 +7,10 @@ import {Action} from './action.interface';
  * @param {S} state
  * @param {Action} action
  * @returns {ReducerTestSuiteType}
- * @constructor
  */
 export function ReducerTestSuite<S>(reducer:ReducerType<S>, state:S, action:Action):ReducerTestSuiteType {
     return function() {
-        const dummyAction:Action = {type: 'DUMMY'};
+        const unknownAction:Action = {type: 'unknown'};
         let initialState:S;
         let expectedState:S;
 
@@ -19,23 +18,23 @@ export function ReducerTestSuite<S>(reducer:ReducerType<S>, state:S, action:Acti
             initialState = Object.assign({}, state);
         });
 
-        it('should create an initial state in response to a dummy action', () => {
-            expectedState = reducer(null, dummyAction);
+        it('should create initial state in response to a unknown action', () => {
+            expectedState = reducer(null, unknownAction);
             expect(expectedState).toBeDefined();
         });
 
-        it('should create an initial state in response to a known action', () => {
+        it('should create initial state in response to a known action', () => {
             expectedState = reducer(null, action);
             expect(expectedState).toBeDefined();
         });
 
-        it('should not return the source state in response to a known action', () => {
+        it('should not return source state in response to a known action', () => {
             expectedState = reducer(initialState, action);
             expect(expectedState).not.toBe(initialState);
         });
 
-        it('should return the source state in response to a dummy action', () => {
-            expectedState = reducer(initialState, dummyAction);
+        it('should return source state in response to a unknown action', () => {
+            expectedState = reducer(initialState, unknownAction);
             expect(expectedState).toBe(initialState);
         });
     };
