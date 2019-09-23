@@ -2,8 +2,7 @@ const path = require('path');
 const {CheckerPlugin} = require('awesome-typescript-loader');
 
 module.exports = {
-    mode: 'development',
-    // devtool: 'source-map',
+    mode: 'production',
     module: {
         rules: [
             {

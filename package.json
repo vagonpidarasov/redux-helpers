@@ -3,9 +3,12 @@
   "version": "0.0.6",
   "description": "Typescript helper definitions and functions for redux library",
   "scripts": {
-    "build": "rm -rf lib && npm run build:webpack && npm run build:tsc",
+      "build": "rm -rf lib && yarn build:webpack && yarn build:tsc && yarn build:index && yarn build:tsc:esm2015 && yarn build:tsc:es5",
     "build:tsc": "tsc --emitDeclarationOnly true --declaration true",
-    "build:webpack": "webpack"
+      "build:tsc:esm2015": "tsc -p tsconfig.esm2015.json",
+      "build:tsc:es5": "tsc -p tsconfig.es5.json",
+      "build:index": "sh generate-index.d.ts.sh",
+      "build:webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,9 @@
     "lib/*"
   ],
   "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "es2015": "lib/esm2015/index.js",
+    "module": "lib/es5/index.js",
   "author": "Stanislav Beresnev",
   "license": "MIT",
   "bugs": {

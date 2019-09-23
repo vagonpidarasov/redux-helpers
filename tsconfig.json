@@ -10,6 +10,13 @@
         "typeRoots": ["node_modules/@types"],
         "types": ["jest"],
         "strict": true,
-        "outDir": "./lib"
-    }
+        "outDir": "./lib",
+        "esModuleInterop": true
+    },
+    "files": [
+        "src/index.ts"
+    ],
+    "exclude": [
+        "src/**/*.spec.ts"
+    ]
 }
