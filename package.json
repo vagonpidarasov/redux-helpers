@@ -1,6 +1,6 @@
 {
   "name": "yet-another-redux-helpers",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Typescript helper definitions and functions for redux library",
   "scripts": {
       "build": "rm -rf lib && yarn build:webpack && yarn build:tsc && yarn build:index && yarn build:tsc:esm2015 && yarn build:tsc:es5",
