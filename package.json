@@ -1,14 +1,14 @@
 {
   "name": "yet-another-redux-helpers",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Typescript helper definitions and functions for redux library",
   "scripts": {
-      "build": "rm -rf lib && yarn build:webpack && yarn build:tsc && yarn build:index && yarn build:tsc:esm2015 && yarn build:tsc:es5",
+    "build": "rm -rf lib && yarn build:webpack && yarn build:tsc && yarn build:index && yarn build:tsc:esm2015 && yarn build:tsc:es5",
     "build:tsc": "tsc --emitDeclarationOnly true --declaration true",
-      "build:tsc:esm2015": "tsc -p tsconfig.esm2015.json",
-      "build:tsc:es5": "tsc -p tsconfig.es5.json",
-      "build:index": "sh generate-index.d.ts.sh",
-      "build:webpack": "webpack"
+    "build:tsc:esm2015": "tsc -p tsconfig.esm2015.json",
+    "build:tsc:es5": "tsc -p tsconfig.es5.json",
+    "build:index": "sh generate-index.d.ts.sh",
+    "build:webpack": "webpack"
   },
   "repository": {
     "type": "git",

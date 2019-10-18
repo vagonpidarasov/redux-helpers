@@ -7,3 +7,5 @@ export * from './action.interface';
 export * from './action-reducer-map.type';
 export * from './reducer.type';
 export * from './state-factory.type';
+export * from './app-init.action';
+export * from './class-action-middleware';
